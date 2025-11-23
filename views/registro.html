@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es"> 
+  <head>
+    <script src="js/color-modes.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Registro para Mi Tiendita - Tu solución de abarrotes local">
+    <meta name="author" content="Mi Tiendita">
+    <meta name="generator" content="Hugo 0.122.0">
+    <title>Registro - Mi Tiendita</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      body {
+        background: linear-gradient(to right, #15008f, #acd0f6); 
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      
+      .container {
+        background-color: #ffffff; 
+        border-radius: 8px; 
+        padding: 20px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        max-width: 800px; 
+        margin: 0 auto; 
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      .form-control, .form-select {
+        margin-bottom: 15px;
+        background-color: #ffffff !important; 
+        color: #000000 !important; 
+        border: 1px solid #ced4da !important; 
+      }
+      
+      .form-control:focus, .form-select:focus {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+        border-color: #15008f !important;
+        box-shadow: 0 0 0 0.2rem rgba(21, 0, 143, 0.25) !important;
+      }
+      
+      .form-control::placeholder {
+        color: #6c757d !important; 
+      }
+      
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+
+      .input-group {
+        position: relative;
+      }
+      
+      .input-group .btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        border-radius: 0;
+      }
+      
+      .input-group-text {
+        background-color: #e9ecef !important;
+        color: #000000 !important;
+        border: 1px solid #ced4da !important;
+      }
+      
+      .invalid-feedback {
+        display: none;
+      }
+      
+      .was-validated .form-control:invalid ~ .invalid-feedback {
+        display: block;
+      }
+      
+      .btn-custom-green {
+        background-color: rgb(2, 0, 128);
+        border-color: rgb(15, 0, 128);
+        color: white;
+      }
+
+      .btn-custom-green:hover {
+        background-color: rgb(48, 0, 100);
+        border-color: rgb(48, 0, 100);
+      }
+      
+      .section-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 20px 0 15px 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e9ecef;
+        color: #15008f;
+      }
+      
+      .form-label {
+        color: #000000 !important;
+        font-weight: 500;
+      }
+      
+      
+      .modal-content {
+        background-color: #ffffff !important;
+        color: #000000 !important;
+      }
+      
+      .py-5.text-center h2 {
+        color: #15008f !important;
+        font-weight: 500;
+        border-bottom: 1px solid #e9ecef;
+      }
+      
+      .py-5.text-center .lead {
+        color: #000000 !important;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <img class="bd-placeholder-img rounded-circle" src="img/logo_tienda.png" alt="Logo Mi Tiendita" width="200" height="200">
+            <h2>Mi Tiendita</h2>
+            <p class="lead">Tu solución de abarrotes local. Conectamos pequeños comercios con su comunidad, ofreciendo herramientas digitales para mejorar la gestión y el servicio al cliente.</p>
+            <div class="col-md-10 col-lg-8 mx-auto">
+              <br>
+              <form id="registroForm" action="/registrar" method="POST" class="needs-validation" novalidate>
+                
+                <div class="section-title">Información del Local</div>
+                
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombreLocal" class="form-label">Nombre del local</label>
+                    <input type="text" class="form-control" id="nombreLocal" name="nombreLocal" placeholder="Ej: Abarrotes 'La Esperanza'" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa el nombre de tu local.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="tipoNegocio" class="form-label">Tipo de negocio</label>
+                    <select class="form-select" id="tipoNegocio" name="tipoNegocio" required>
+                      <option value="">Selecciona...</option>
+                      <option value="abarrotes">Abarrotes</option>
+                      <option value="minisuper">Minisúper</option>
+                      <option value="tienda">Tienda de conveniencia</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor selecciona el tipo de negocio.
+                    </div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="section-title">Dirección</div>
+                
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="calle" class="form-label">Calle</label>
+                    <input type="text" class="form-control" id="calle" name="calle" placeholder="Nombre de la calle" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa el nombre de la calle.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="colonia" class="form-label">Colonia</label>
+                    <input type="text" class="form-control" id="colonia" name="colonia" placeholder="Nombre de la colonia" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa el nombre de la colonia.
+                    </div>
+                  </div>
+
+                  <div class="col-md-5">
+                    <label for="numeroLocal" class="form-label">Número del local</label>
+                    <div class="input-group has-validation">
+                      <span class="input-group-text">No.</span>
+                      <input type="text" class="form-control" id="numeroLocal" name="numeroLocal" placeholder="##" required>
+                      <div class="invalid-feedback">
+                        Por favor ingresa el número del domicilio.
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-7">
+                    <label for="codigoPostal" class="form-label">Código Postal</label>
+                    <input type="text" class="form-control" id="codigoPostal" name="codigoPostal" placeholder="00000" pattern="[0-9]{5}" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa un código postal válido (5 dígitos).
+                    </div>
+                  </div>
+                </div>
+                <br>
+
+                <div class="section-title">Información de Contacto</div>
+                
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombrePropietario" class="form-label">Nombre completo del propietario</label>
+                    <input type="text" class="form-control" id="nombrePropietario" name="nombrePropietario" placeholder="Nombre y apellidos" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa tu nombre completo.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="telefono" class="form-label">Teléfono de contacto</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="(000) 000-0000" pattern="[0-9]{10}" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa un número de teléfono válido (10 dígitos).
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="email" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                    <div class="invalid-feedback">
+                      Por favor ingresa una dirección de correo válida.
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-4">
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="terminos" required>
+                  <label class="form-check-label" for="terminos">Acepto los <a href="#" data-bs-toggle="modal" data-bs-target="#terminosModal">términos y condiciones</a> de privacidad.</label>
+                  <div class="invalid-feedback">
+                    Debes aceptar los términos y condiciones para continuar.
+                  </div>
+                </div>
+
+                <hr class="my-4">
+                <br>
+                
+                <button class="w-100 btn btn-primary btn-lg btn-custom-green" type="submit">Registrar Mi Tienda</button>
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div class="modal fade" id="terminosModal" tabindex="-1" aria-labelledby="terminosModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="terminosModalLabel">Términos y Condiciones</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6>Política de Privacidad</h6>
+            <p>En Mi Tiendita respetamos tu privacidad y nos comprometemos a proteger la información personal que nos proporciones. Tu información de contacto y datos del negocio serán utilizados únicamente para mejorar nuestros servicios y mantenerte informado sobre actualizaciones relevantes.</p>
+            
+            <h6>Uso de la Información</h6>
+            <p>La información que nos proporcionas será utilizada para:</p>
+            <ul>
+              <li>Crear y gestionar tu cuenta en nuestra plataforma</li>
+              <li>Proporcionarte soporte y asistencia técnica</li>
+              <li>Enviarte información sobre actualizaciones y mejoras en nuestros servicios</li>
+              <li>Personalizar tu experiencia en nuestra plataforma</li>
+            </ul>
+            
+            <h6>Seguridad de Datos</h6>
+            <p>Implementamos medidas de seguridad para proteger tu información contra accesos no autorizados, alteración, divulgación o destrucción.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- SOLO UN SCRIPT DE VALIDACIÓN - ELIGE UNO -->
+    <script src="js/checkout.js"></script>
+    <!-- REMOVÍ el script duplicado de validación -->
+    
+  </body>
+</html>
