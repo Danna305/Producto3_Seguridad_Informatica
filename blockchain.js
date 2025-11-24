@@ -3,7 +3,7 @@ const crypto = require('crypto');
 class Block {
     constructor(timestamp, data, previousHash = '') {
         this.timestamp = timestamp;
-        this.data = data; // Datos del registro
+        this.data = data; 
         this.previousHash = previousHash;
         this.hash = this.calculateHash();
         this.nonce = 0;
@@ -39,13 +39,8 @@ class Blockchain {
         this.difficulty = 2;
         this.pendingRegistrations = [];
         
-        // ✅ AGREGAR BLOQUE INICIAL AUTOMÁTICAMENTE
-        this.addRegistration({
-            timestamp: new Date().toISOString(),
-            usuario: 'Sistema',
-            email: 'sistema@mitiendita.com', 
-            accion: 'inicializacion'
-        });
+        
+        
     }
 
     createGenesisBlock() {
@@ -60,13 +55,9 @@ class Blockchain {
         console.log('📝 Agregando registro a blockchain:', data);
         this.pendingRegistrations.push(data);
         
-        // ✅ CAMBIO: Minar inmediatamente después de cada registro
+        
         this.minePendingRegistrations();
         
-        // ❌ ELIMINAR esto:
-        // if (this.pendingRegistrations.length >= 3) {
-        //     this.minePendingRegistrations();
-        // }
     }
 
     minePendingRegistrations() {
@@ -78,13 +69,12 @@ class Blockchain {
             this.getLatestBlock().hash
         );
 
-        console.log('⛏️ Minando bloque...');
+        console.log('⛏️ Minando bloque');
         block.mineBlock(this.difficulty);
 
         this.chain.push(block);
-        console.log(`✅ Bloque #${this.chain.length} agregado a la cadena`);
         
-        // Limpiar registros pendientes
+        
         this.pendingRegistrations = [];
     }
 
@@ -114,7 +104,7 @@ class Blockchain {
     }
 }
 
-// Crear instancia global de blockchain
+
 const myBlockchain = new Blockchain();
 
 module.exports = myBlockchain;
