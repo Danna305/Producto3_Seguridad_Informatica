@@ -3,6 +3,7 @@
 ## Integrantes:
 - Alexia Sanchez Vazquez
 - Danna Michelle Cruz Vazquez
+- Maria Jose Hernandez Guevara
 
 ## 🎯 Descripción del Proyecto
 Sistema web para gestión de pequeñas tiendas que implementa protocolos de seguridad avanzados, firmas digitales y principios de blockchain.
